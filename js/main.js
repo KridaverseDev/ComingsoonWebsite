@@ -84,11 +84,12 @@
         $('input, textarea, select').placeholder();
     };
 
-
     var ssFinalCountdown = function() {
-        // Set the date for 45 days from now
-        var finalDate = new Date();
-        finalDate.setTime(finalDate.getTime() + 45 * 24 * 60 * 60 * 1000);
+        // Check if the countdown end date is stored in local storage
+        var storedEndDate = localStorage.getItem('countdownEndDate');
+    
+        var defaultEndDate = new Date("February 14, 2024 23:59:00 GMT+00:00");
+        var finalDate = storedEndDate ? new Date(storedEndDate) : defaultEndDate;
     
         $('.home-content__clock').countdown(finalDate)
             .on('update.countdown finish.countdown', function(event) {
@@ -105,16 +106,12 @@
     
                 $(this).html(event.strftime(str));
     
-                // If the countdown is finished, redirect to index-particles.html
-                if (event.type === 'finish') {
-                    setTimeout(function() {
-                        window.location.href = 'index-particles.html';
-                    }, 5000); // Adjust the delay as needed (e.g., 5000 milliseconds for 5 seconds)
-                }
+                
     
             });
     };
     
+   
     
     
     // Call the modified countdown function
