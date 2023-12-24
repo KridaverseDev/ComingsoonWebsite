@@ -88,7 +88,7 @@
     var ssFinalCountdown = function() {
         // Set the date for 45 days from now
         var finalDate = new Date();
-        finalDate.setDate(finalDate.getDate() + 37);
+        finalDate.setTime(finalDate.getTime() + 45 * 24 * 60 * 60 * 1000);
     
         $('.home-content__clock').countdown(finalDate)
             .on('update.countdown finish.countdown', function(event) {
@@ -114,6 +114,8 @@
     
             });
     };
+    
+    
     
     // Call the modified countdown function
     ssFinalCountdown();
