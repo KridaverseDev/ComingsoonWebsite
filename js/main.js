@@ -88,7 +88,7 @@
         // Check if the countdown end date is stored in local storage
         var storedEndDate = localStorage.getItem('countdownEndDate');
     
-        var defaultEndDate = new Date("February 14, 2024 23:59:00 GMT+00:00");
+        var defaultEndDate = new Date("February 28, 2024 23:59:00 GMT+00:00");
         var finalDate = storedEndDate ? new Date(storedEndDate) : defaultEndDate;
     
         $('.home-content__clock').countdown(finalDate)
