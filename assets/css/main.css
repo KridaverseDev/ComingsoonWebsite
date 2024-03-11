@@ -612,7 +612,7 @@ section {
 .about p {
   font-size: 20px;
   line-height: 1.6;
-  color: var(--color-primary);
+  color: #000000;
   margin-bottom: 20px;
   text-align: justify;
 }
@@ -731,9 +731,7 @@ section {
 
 
 
-/*--------------------------------------------------------------
-  # Recent Blog Posts Section
-  --------------------------------------------------------------*/
+
 .recent-posts article {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   background-color: #fff;
