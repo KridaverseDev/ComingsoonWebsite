@@ -1,0 +1,391 @@
+/* styles for that hero section */
+.hero-logo-container,
+.hero-content-container {
+  background-color: rgba(255, 255, 255, 0.05);
+  z-index: 10;
+  backdrop-filter: blur(50px);
+}
+.parent {
+  --_br: 1rem;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  /* box-shadow: 0 4px 103px 0 rgba(0, 0, 0, 0.25); */
+}
+
+.hero-content-container {
+  grid-area: 3 / 1 / 13 / 7;
+  border-radius: 0 42px 42px 42px;
+}
+.nav-container {
+  grid-area: 1 / 3 / 3 / 7;
+  background: transparent;
+}
+.hero-logo-container {
+  grid-area: 1 / 1 / 3 / 3;
+  border-radius: 35px 35px 0 0;
+}
+
+.hero-logo-container::after {
+  --_size: var(--_br);
+  content: "";
+  position: absolute;
+  width: var(--_size);
+  aspect-ratio: 1;
+  background-image: radial-gradient(
+    circle at 100% 100%,
+    transparent var(--_size),
+    var(--_corner-color, white) calc(var(--_size) + 1px)
+  );
+  rotate: -90deg;
+}
+
+.hero-logo-container {
+  display: grid;
+  padding: 1rem 1rem 0 1rem;
+  /* background: black; */
+  font-weight: 500;
+  /* grid-row: 2 / 3; */
+  /* grid-column: 1 / 2; */
+  /* border-radius: var(--_br) var(--_br) 0 0; */
+}
+
+.hero-logo-container::after {
+  --_size: calc(var(--_br) * 2.25);
+  --_corner-color: rgba(255, 255, 255, 0.05);
+  /* grid-column: 2 / 3;
+  grid-row: 2 / 3; */
+  right: -36px;
+  bottom: 0;
+}
+
+.parent::before,
+.parent::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 128, 255);
+  height: 300px;
+  width: 300px;
+  filter: blur(500px);
+}
+
+.parent::before {
+  top: 20%;
+  left: 0%;
+}
+.parent::after {
+  bottom: 35%;
+  right: 0%;
+}
+
+/* About us styles */
+
+.fading-container {
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.08) 4%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  backdrop-filter: blur(0);
+  padding: 5%;
+  padding-bottom: 4%;
+  border-radius: 59px;
+}
+
+.fading-card {
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.05) 50%,
+    rgba(255, 255, 255, 0) 85%
+  );
+  backdrop-filter: blur(60.9px);
+  padding-bottom: 4%;
+
+  /* border: 0.75px solid white; */
+  box-shadow: 0px 60px 30px 0px rgba(0, 0, 0, 0.1);
+}
+
+.border-gradient {
+  border: 1px solid transparent;
+  border-image: linear-gradient(90deg, #1f1f1f 0%, #0080ff 51%, #1f1f1f 100%);
+  border-image-slice: 1;
+}
+.fading-container::before {
+  content: "";
+  background-image: url("./assets/hangingballsmall.svg");
+  /* background: #9b3c3c; */
+  background-repeat: none;
+  object-fit: fill;
+  height: 172px;
+  width: 28px;
+  position: absolute;
+  bottom: -172px;
+}
+.fading-container::after {
+  content: "";
+  background-image: url("./assets/hangingball.svg");
+  /* background: #9b3c3c; */
+  background-repeat: none;
+  object-fit: fill;
+  height: 185px;
+  width: 28px;
+  position: absolute;
+  bottom: -185px;
+  margin-left: 5%;
+}
+
+/* contact-us section styles */
+
+.contact-details-box {
+  box-shadow: 0 4px 40px 0px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(64px);
+}
+
+.contact-us-content-box-border {
+  position: relative;
+}
+
+.contact-us-content-box-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 26px;
+  padding: 0.45px;
+  background: linear-gradient(
+    90deg,
+    rgba(63, 131, 248, 0.75) 18%,
+    rgba(63, 131, 248, 0.4) 74%,
+    rgba(255, 255, 255, 0) 90%
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.dotted-divider {
+  border-image: linear-gradient(
+      rgba(255, 255, 255, 0) 5%,
+      rgba(255, 255, 255, 0.75) 28%,
+      rgba(255, 255, 255, 0.5) 64%,
+      rgba(255, 255, 255, 0) 95%
+    )
+    1;
+
+  border-width: 1px;
+  border-style: dotted;
+}
+
+.dotted-divider {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.75) 28%,
+    rgba(255, 255, 255, 0.5) 64%,
+    rgba(255, 255, 255, 0) 90%
+  );
+}
+
+/* glow effects */
+
+.soft-glow::before,
+.soft-glow::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 128, 255);
+  height: 120px;
+  width: 120px;
+  filter: blur(150px);
+}
+
+.soft-glow::before {
+  top: 20%;
+  left: 0%;
+}
+.soft-glow::after {
+  top: 60%;
+  right: 0%;
+}
+
+.about-us-grid {
+  background-image: url("./assets/Lines.png");
+  background-repeat: repeat;
+
+  object-fit: cover;
+  background-size: 200%;
+  filter: brightness(120%);
+  background-position: 90% 30%;
+}
+
+@media (max-width: 700px) {
+  .career-mobile-bg {
+    background-image: url("./assets/bg-grid-hero-mobile.png");
+    background-repeat: no-repeat;
+
+    object-fit: cover;
+    background-size: 200%;
+    background-position: 110% 60%;
+  }
+}
+
+.desktop-grid {
+  background-image: url("./assets/Lines.png");
+  background-repeat: repeat;
+
+  object-fit: cover;
+  background-size: 110%;
+  background-position: 50% 200%;
+}
+
+/* mobile styles */
+.mobile-nav {
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(88.6px);
+  box-shadow: 0 4px 33px 0px rgba(0, 0, 0, 0.25);
+}
+
+.hero-bg-pattern {
+  background-image: url("./assets/bg-grid-hero-mobile.png");
+  background-repeat: no-repeat;
+}
+
+.mobile-fading-container {
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.05) 60%,
+    rgba(255, 255, 255, 0) 90%
+  );
+  backdrop-filter: blur(60.9px);
+  padding: 10% 4%;
+
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.mobile-fading-container-balls::before {
+  content: "";
+  background-image: url("./assets/mobilehangingballsmall.svg");
+  /* background: #9b3c3c; */
+  background-repeat: none;
+  object-fit: fill;
+  height: 84px;
+  width: 13px;
+  position: absolute;
+  bottom: -84px;
+}
+.mobile-fading-container-balls::after {
+  content: "";
+  background-image: url("./assets/mobilehangingball.svg");
+  /* background: #9b3c3c; */
+  background-repeat: none;
+  object-fit: fill;
+  height: 91px;
+  width: 13px;
+  position: absolute;
+  bottom: -91px;
+  margin-left: 15%;
+}
+
+.mobile-contact-us-section-box-border {
+  border-image: linear-gradient(
+      360deg,
+      rgba(63, 131, 248, 0.75) 18%,
+      rgba(63, 131, 248, 0.4) 74%,
+      rgba(255, 255, 255, 0) 90%
+    )
+    1;
+  border-width: 0.5px;
+  border-style: solid;
+}
+
+.contact-us-bg {
+  background-image: url("./assets/contact-us-bg.png");
+  background-repeat: no-repeat;
+  object-fit: contain;
+  background-size: 50%;
+  background-position: 3% 55%;
+}
+
+/* media queries for added responsiveness */
+
+@media screen and (min-width: 701px) and (max-width: 800px) {
+  #hero-desktop-robot-image {
+    right: -35% !important;
+  }
+  .desktop-nav ul {
+    font-size: 16px;
+  }
+  .hero-text {
+    font-size: 30px !important;
+  }
+  .hero-subtext {
+    font-size: 16px !important;
+  }
+}
+@media screen and (min-width: 801px) and (max-width: 900px) {
+  #hero-desktop-robot-image {
+    right: -25% !important;
+  }
+  .desktop-nav ul {
+    font-size: 20px;
+  }
+  .hero-text {
+    font-size: 40px !important;
+  }
+  .hero-subtext {
+    font-size: 18px !important;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 699px) {
+  #mobile-hero-robot {
+    right: -15% !important;
+  }
+}
+@media screen and (min-width: 499px) and (max-width: 599px) {
+  #mobile-hero-robot {
+    right: -26% !important;
+  }
+}
+@media screen and (min-width: 445px) and (max-width: 499px) {
+  #mobile-hero-robot {
+    right: -40% !important;
+  }
+}
+@media screen and (min-width: 400px) and (max-width: 440px) {
+  #mobile-hero-robot {
+    right: -40% !important;
+    max-height: 90%;
+  }
+}
+
+/* talento craft styles */
+.talento-right {
+  background-image: url("./assets/bg-grid-hero-mobile.png");
+  z-index: 99;
+  background-repeat: no-repeat;
+
+  object-fit: cover;
+  background-size: 125%;
+  background-position: 160% 15%;
+}
+
+/* coming soon page styles */
+.coming-soon-container {
+  background-color: rgba(255, 255, 255, 0.05);
+  z-index: 10;
+  box-shadow: 30px 60px 30px 0px rgba(0, 0, 0, 0.1);
+}
+
+.coming-soon-bg {
+  background-image: url("./assets/bg-grid-hero-mobile.png");
+  z-index: 99;
+  background-repeat: no-repeat;
+
+  object-fit: cover;
+  background-size: 70%;
+  background-position: 100% 10%;
+}
