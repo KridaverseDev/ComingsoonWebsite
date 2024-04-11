@@ -1,15 +1,36 @@
-import React from "react";
+import { addDoc, collection } from "firebase/firestore";
+import React, { useState } from "react";
 import iphone from "../../assets/iphone-mock.png";
+import { database } from "../../firebase";
+
 import MobileNavbar from "../Navbar/MobileNavbar";
 
 const TalentoCraftMobile = (props) => {
-  const handleEmailSubmit = (event) => {
+  const [email, setEmail] = useState("");
+
+  const handleEmailSubmit = async (event) => {
     event.preventDefault();
 
-    const email = document.getElementById("wailistEmail").value;
-    console.log("Email:", email);
+    console.log("Email just printed:", email);
 
-    alert("Email added to Waitlist :)");
+    try {
+      const docRef = await addDoc(
+        collection(database, "talentoCraftWaitlist"),
+        {
+          email: email,
+        }
+      );
+      // console.log("Document written with ID: ", docRef.id);
+
+      alert("Your email has been added to Waitlist :)");
+    } catch (error) {
+      console.error("Error adding email to databse: ", error);
+      alert("An error occurred. Please try again later. :(");
+    }
+  };
+
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
   };
   return (
     <section className="soft-glow">
@@ -58,6 +79,8 @@ const TalentoCraftMobile = (props) => {
                 id="wailistEmail"
                 className="block w-full p-5 ps-2  pe-2 text-[9px] text-gray-900 border-[.5px] border-gray-300 rounded-lg bg-[rgba(0,0,0,0)]    "
                 placeholder="Enter your email to join the waitlist"
+                value={email}
+                onChange={handleEmailChange}
                 required
               />
               <button

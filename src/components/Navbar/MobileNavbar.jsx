@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import logo from "../../assets/logo.png";
+import Accordian, { AccordianItem } from "../Accordian";
 import "./Navbar.css";
 
 const MobileNavbar = (props) => {
@@ -53,13 +54,29 @@ const MobileNavbar = (props) => {
               About
             </a>
           </li>
-          <li onClick={handleLinkClick}>
+          {/* <li onClick={handleLinkClick}>
             <a
               className=" hover:cursor-pointer hover:text-kridaBlue active:scale-95 active:brightness-75"
               href="talento-craft"
             >
               Our Work
             </a>
+          </li> */}
+          <li>
+            <Accordian>
+              <AccordianItem value="1" trigger="Our Work">
+                <li className="mt-2">
+                  <a href="/talento-craft" onClick={handleLinkClick}>
+                    Mobile Apps
+                  </a>
+                </li>
+                <li className="mt-2">
+                  <a onClick={handleLinkClick} href="/coming-soon">
+                    Games
+                  </a>
+                </li>
+              </AccordianItem>
+            </Accordian>
           </li>
           <li onClick={handleLinkClick}>
             <a

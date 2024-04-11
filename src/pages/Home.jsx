@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import AboutUs from "../components/AboutUs/AboutUs";
 import AboutUsMobile from "../components/AboutUs/AboutUsMobile";
+import Blogs from "../components/Blogs/Blogs";
 import Career from "../components/Career/Career";
 import ContactUs from "../components/ContactUs/ContactUs";
 import ContactUsMobile from "../components/ContactUs/ContactUsMobile";
@@ -28,6 +29,7 @@ const Home = (props) => {
           <div className="soft-glow">
             <HeroMobile />
             <AboutUsMobile />
+            <Blogs />
           </div>
           <Career />
           <ContactUsMobile />
@@ -37,6 +39,7 @@ const Home = (props) => {
           <div className="desktop-grid">
             <Hero />
             <AboutUs />
+            {/* <Blogs /> */}
             <Career />
           </div>
           <ContactUs />

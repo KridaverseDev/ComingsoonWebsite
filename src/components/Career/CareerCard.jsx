@@ -8,7 +8,7 @@ const CareerCard = ({ title, skills, url, photo }) => {
   };
   return (
     <>
-      <div className="fading-card rounded-[13px] lg:rounded-[59px] p-5  flex justify-center items-center flex-col  h-[350px] min-w-[25vw] max-w-[500px]">
+      <div className="fading-card rounded-[13px] lg:rounded-[59px] p-5  flex justify-center items-center flex-col  h-[350px] min-w-[25vw] max-w-[500px] w-full">
         <div className="card-image ">
           <img src={photo} width="150" className="rounded-[42px]" />
         </div>

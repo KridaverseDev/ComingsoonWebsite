@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutUs = (props) => {
   return (
-    <section id="about-us" className="mx-[3%] my-[3%]">
+    <section id="about-us" className="mx-[3%] mt-[3%]">
       <div className="fading-container">
         <div className="title flex justify-center">
           <div className="px-[8%]">

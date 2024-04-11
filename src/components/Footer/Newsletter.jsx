@@ -1,4 +1,6 @@
+import { addDoc, collection } from "firebase/firestore";
 import React, { useState } from "react";
+import { database } from "../../firebase";
 
 const Newsletter = (props) => {
   const [formData, setFormData] = useState({
@@ -14,9 +16,18 @@ const Newsletter = (props) => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form Data:", formData);
+
+    try {
+      const docRef = await addDoc(collection(database, "newsletter"), formData);
+      // console.log("Document written with ID: ", docRef.id);
+
+      alert("Sucessfully subscribed to our newsletter   :)");
+    } catch (error) {
+      console.error("Error adding email to databse: ", error);
+      alert("An error occurred. Please try again later. :(");
+    }
   };
 
   return (
