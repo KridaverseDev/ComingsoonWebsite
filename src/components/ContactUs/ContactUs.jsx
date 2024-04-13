@@ -65,7 +65,7 @@ const ContactUs = (props) => {
                 <div className="    dotted-divider"></div>
                 <div className="contact-box-content  ">
                   <p className="text-[21px]">Mail:</p>
-                  <p className=" opacity-[57%]">Rkridaverse@gmail.com</p>
+                  <p className=" opacity-[57%]">kridaverse@gmail.com</p>
                 </div>
               </div>
             </a>

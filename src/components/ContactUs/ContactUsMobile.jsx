@@ -70,7 +70,7 @@ const ContactUsMobile = (props) => {
                 <div className="contact-box-content  ">
                   <p className="text-[12px]">Mail:</p>
                   <p className=" text-[10px] opacity-[57%]">
-                    Rkridaverse@gmail.com
+                    kridaverse@gmail.com
                   </p>
                 </div>
               </div>
