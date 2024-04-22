@@ -11,7 +11,7 @@ const Navbar = (props) => {
           <a href="#about-us">About</a>
         </li>
         <li className=" hover:cursor-pointer hover:text-kridaBlue active:scale-95 active:brightness-75">
-          <a href="talento-craft">Our Work</a>
+          <a href="/talento-craft">Our Work</a>
         </li>
         <li className=" hover:cursor-pointer hover:text-kridaBlue active:scale-95 active:brightness-75">
           <a href="#career">Career</a>

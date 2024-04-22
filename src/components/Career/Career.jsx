@@ -19,19 +19,19 @@ const Career = (props) => {
           title="Mobile Application <br /> Intern"
           skills=" Flutter, UI/UX design"
           url="https://forms.gle/io17imkpQkfW653dA"
-          photo="src/assets/CareerCards/MAI.png"
+          photo="./src/assets/CareerCards/MAI.png"
         />
         <CareerCard
           title="MERN Stack Developer"
           skills="React Js, Node, MongoDB"
           url="https://forms.gle/io17imkpQkfW653dA"
-          photo="src/assets/CareerCards/Gamer.png"
+          photo="./src/assets/CareerCards/Gamer.png"
         />
         <CareerCard
           title="Human resource"
           skills="Communication skills, Recruitment"
           url="https://forms.gle/io17imkpQkfW653dA"
-          photo="src/assets/CareerCards/Artist.png"
+          photo="./src/assets/CareerCards/Artist.png"
         />
       </div>
     </section>
