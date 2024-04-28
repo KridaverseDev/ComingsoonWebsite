@@ -22,14 +22,14 @@ const Career = (props) => {
           photo="src/assets/CareerCards/MAI.png"
         />
         <CareerCard
-          title="MERN Stack Developer"
-          skills="React Js, Node, MongoDB"
+          title="Unreal Engine"
+          skills="Blueprint Scripting, C++, Game Design Principles"
           url="https://forms.gle/io17imkpQkfW653dA"
           photo="src/assets/CareerCards/Gamer.png"
         />
         <CareerCard
           title="Human resource"
-          skills="Communication skills, Recruitment"
+          skills="Drawing Skills, Creativity and Imagination"
           url="https://forms.gle/io17imkpQkfW653dA"
           photo="src/assets/CareerCards/Artist.png"
         />
