@@ -28,7 +28,7 @@ const Career = (props) => {
           photo="/static/CareerCards/Gamer.png"
         />
         <CareerCard
-          title="Human resource"
+          title="2D Sketch Artist"
           skills="Drawing Skills, Creativity and Imagination"
           url="https://forms.gle/io17imkpQkfW653dA"
           photo="/static/CareerCards/Artist.png"
