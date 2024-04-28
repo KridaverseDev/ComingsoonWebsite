@@ -43,7 +43,7 @@ export function AccordianItem({ children, value, trigger, ...props }) {
         className="overflow-y-hidden transition-all duration-300"
         style={{ height: open ? ref.current?.offsetHeight || 0 : 0 }}
       >
-        <div className="pt-2 p-4" ref={ref}>
+        <div className="pt-2 px-4" ref={ref}>
           {children}
         </div>
       </div>

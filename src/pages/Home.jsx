@@ -29,7 +29,7 @@ const Home = (props) => {
           <div className="soft-glow">
             <HeroMobile />
             <AboutUsMobile />
-            <Blogs />
+            {/* <Blogs /> */}
           </div>
           <Career />
           <ContactUsMobile />

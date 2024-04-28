@@ -1,33 +1,42 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { useInView } from "react-intersection-observer";
 import getStarted from "../../assets/get-started-button.png";
 import logo from "../../assets/logo.png";
 import robot from "../../assets/robot.png";
 import Navbar from "../Navbar/Navbar";
+
 const Hero = (props) => {
+  const { ref: hero, inView: heroIsVisible, entry } = useInView();
+
   return (
     <section
+      ref={hero}
       id="hero"
-      className=" hero-section px-[3%] pt-[5%]   overflow-hidden"
+      className="hero-section px-[3%] pt-[3%] overflow-hidden"
     >
-      <div className="parent  h-[85vh] ">
-        <div className="hero-logo-container  flex justify-center items-center">
+      <div className="parent h-[85vh] ">
+        <div className="hero-logo-container flex justify-center items-center">
           {" "}
           <a href="/#hero" className="h-full">
             <div className="font-gugi text-4xl h-full w-full text-[#fff]">
               <img
                 src={logo}
                 alt="logo"
-                className="w-full mx-auto max-h-full "
+                className="w-full mx-auto max-h-full"
               />
             </div>{" "}
           </a>
         </div>
-        <div className="nav-container ">
+        <div className="nav-container">
           <Navbar />{" "}
         </div>
-        <div className="hero-content-container  flex ">
-          <div className="hero-left w-7/12 flex flex-col justify-center px-10 h-full">
-            <div className=" hero-text font-gugi text-[50px] pb-5">
+        <div className="hero-content-container flex ">
+          <div
+            className={`hero-left hero-text-default ${
+              heroIsVisible ? "hero-text-show" : ""
+            }     w-7/12 flex flex-col justify-center px-10 h-full`}
+          >
+            <div className="hero-text font-gugi text-[50px] pb-5">
               Welcome To Kridaverse
             </div>
             <div className="hero-subtext capitalize text-[#DFDFDF] opacity-[52%] text-[20px] pb-10">
@@ -44,18 +53,22 @@ const Hero = (props) => {
                   src={getStarted}
                   draggable="false"
                   alt="get started button"
-                  className="w-fit   duration-300 active:scale-95 active:brightness-[80%]"
+                  className="w-fit duration-300 active:scale-95 active:brightness-[80%]"
                 />
               </a>
             </div>
           </div>
-          <div className="hero-right  w-5/12">
+          <div
+            className={`hero-right robot-default ${
+              heroIsVisible ? "robot-show" : ""
+            } w-5/12`}
+          >
             <img
               id="hero-desktop-robot-image"
               draggable="false"
               src={robot}
               alt="robot-image"
-              className=" max-h-[100%] absolute bottom-0 sm:right-[-20%] md:right-[-15vw] lg:right-[-5%]"
+              className="max-h-[100%] absolute bottom-0 sm:right-[-20%] md:right-[-15vw] lg:right-[-5%]"
             />
           </div>
         </div>

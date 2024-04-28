@@ -47,7 +47,7 @@ const Newsletter = (props) => {
         <input
           type="text"
           id="name"
-          className="bg-gray-50 border  focus:outline-none text-gray-900 text-sm rounded-lg  block w-full ps-10 p-[6px]    bg-[rgba(0,0,0,0)]  border-gray-600  placeholder-gray-400    d focus:ring-blue-500  focus:border-grey-500"
+          className="bg-gray-50 border  focus:outline-none text-gray-900 text-xs lg:text-sm rounded-lg  block w-full ps-10 p-[6px]    bg-[rgba(0,0,0,0)]  border-gray-600  placeholder-gray-400    focus:ring-blue-500  focus:border-grey-500"
           placeholder="Your Name"
           value={formData.name}
           onChange={handleInputChange}
@@ -70,7 +70,7 @@ const Newsletter = (props) => {
         <input
           type="email"
           id="email"
-          className="bg-gray-50 border  focus:outline-none text-gray-900 text-sm rounded-lg  block w-full ps-10 p-[6px]     bg-[rgba(0,0,0,0)]  border-gray-600  placeholder-gray-400    d focus:ring-blue-500  focus:border-grey-500"
+          className="bg-gray-50 border  focus:outline-none text-gray-900 text-xs lg:text-sm rounded-lg  block w-full ps-10 p-[6px]     bg-[rgba(0,0,0,0)]  border-gray-600  placeholder-gray-400      focus:ring-blue-500  focus:border-grey-500"
           placeholder="Your Email Address"
           value={formData.email}
           onChange={handleInputChange}

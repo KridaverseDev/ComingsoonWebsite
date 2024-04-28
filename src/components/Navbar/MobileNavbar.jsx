@@ -65,12 +65,12 @@ const MobileNavbar = (props) => {
           <li>
             <Accordian>
               <AccordianItem value="1" trigger="Our Work">
-                <li className="mt-2">
+                <li className="mt-4">
                   <a href="/talento-craft" onClick={handleLinkClick}>
                     Mobile Apps
                   </a>
                 </li>
-                <li className="mt-2">
+                <li className="mt-4">
                   <a onClick={handleLinkClick} href="/coming-soon">
                     Games
                   </a>

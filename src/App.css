@@ -389,3 +389,26 @@
   background-size: 70%;
   background-position: 100% 10%;
 }
+
+/* animation styles */
+
+.robot-default {
+  opacity: 0;
+  translate: 10%;
+  transition: all 1s;
+}
+
+.robot-show {
+  opacity: 1;
+  translate: 0%;
+}
+.hero-text-default {
+  opacity: 0;
+  translate: -10%;
+  transition: all 1s;
+}
+
+.hero-text-show {
+  opacity: 1;
+  translate: 0%;
+}

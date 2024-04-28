@@ -13,11 +13,11 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: "/coming-soon",
+    path: "coming-soon",
     element: <ComingSoon />,
   },
   {
-    path: "/talento-craft",
+    path: "talento-craft",
     element: <TalentoCraft />,
   },
 ]);
